@@ -16,6 +16,11 @@
 </template>
 <script>
 export default {
-  props: { newsItems: { type: Array, required: true } },
+  props: {
+    newsItems: {
+      type: Array,
+      required: true,
+    },
+  },
 }
 </script>

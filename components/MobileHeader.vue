@@ -45,9 +45,18 @@
 <script>
 export default {
   props: {
-    logoColor: { type: String, required: true },
-    textColor: { type: String, required: true },
-    bgClass: { type: String, required: true },
+    logoColor: {
+      type: String,
+      required: true,
+    },
+    textColor: {
+      type: String,
+      required: true,
+    },
+    bgClass: {
+      type: String,
+      required: true,
+    },
   },
 }
 </script>
