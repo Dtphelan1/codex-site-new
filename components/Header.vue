@@ -1,7 +1,7 @@
 <template>
   <div>
-    <desktop-header :logo-color="logoColor" :underline-link="underlineLink" />
-    <mobile-header
+    <DesktopHeader :logo-color="logoColor" :underline-link="underlineLink" />
+    <MobileHeader
       :logo-color="mobileLogoColor"
       :text-color="mobileTextColor"
       :bg-class="mobileClass"
