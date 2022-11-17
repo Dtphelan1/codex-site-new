@@ -8,7 +8,8 @@
         tabindex="1"
         :class="'flex py-2 font-bold text-newsgrey sm:text-[16px] ' + textSize"
       >
-        {{ item.source }} <img class="px-2" src="img/diamond-bullet.svg" />
+        {{ item.source }}
+        <img class="px-2" src="~/assets/img/diamond-bullet.svg" />
         {{ item.date }}
       </h2>
       <p tabindex="1">{{ item.summary }}</p>

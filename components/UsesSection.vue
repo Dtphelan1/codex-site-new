@@ -15,7 +15,7 @@
         <div tabindex="2" class="use-num-desc self-end">In Execution</div>
       </div>
       <div tabindex="-1" class="hidden lg:flex flex-col items-stretch">
-        <img width="63" src="img/diamond1.svg" />
+        <img width="63" src="~/assets/img/diamond1.svg" />
         <div class="use-line use-line-1 border-darkred"></div>
       </div>
       <div class="use-list use-list-execute pr-14 pt-10 lg:pr-0 lg:pt-0">
@@ -37,7 +37,7 @@
         <div tabindex="2" class="use-num-desc self-end">In Planning</div>
       </div>
       <div tabindex="-1" class="hidden lg:flex flex-col items-stretch">
-        <img width="43" src="img/diamond2.svg" />
+        <img width="43" src="~/assets/img/diamond2.svg" />
         <div class="use-line border-gold"></div>
       </div>
       <div class="use-list use-list-planning pr-14 pt-10 lg:pr-0 lg:pt-0">
@@ -59,7 +59,7 @@
         <div tabindex="2" class="use-num-desc self-end">In Discovery</div>
       </div>
       <div tabindex="-1" class="hidden lg:flex flex-col items-stretch">
-        <img width="33" src="img/diamond3.svg" />
+        <img width="33" src="~/assets/img/diamond3.svg" />
         <div class="use-line border-medgrey"></div>
       </div>
       <div class="use-list use-list-discovery pr-14 pt-10 lg:pr-0 lg:pt-0">

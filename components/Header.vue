@@ -1,10 +1,15 @@
 <template>
   <div>
-    <DesktopHeader :logo-color="logoColor" :underline-link="underlineLink" />
+    <DesktopHeader
+      :logo-color="logoColor"
+      :underline-link="underlineLink"
+      class="hidden md:block"
+    />
     <MobileHeader
       :logo-color="mobileLogoColor"
       :text-color="mobileTextColor"
       :bg-class="mobileClass"
+      class="block md:hidden"
     />
   </div>
 </template>

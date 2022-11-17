@@ -1,6 +1,4 @@
-// import defaultTheme from 'tailwindcss/defaultTheme'
-
-export default {
+module.exports = {
   content: [
     `./components/**/*.{vue,js,ts}`,
     `./layouts/**/*.vue`,

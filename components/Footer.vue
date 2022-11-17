@@ -27,7 +27,11 @@
           target="_blank"
           href="https://www.linkedin.com/company/codex-common-oncology-data-elements-extensions/?trk=public_profile_topcard-current-company"
           class="flex flex-row underline"
-          ><img width="20" class="mr-2" src="img/linkin.svg" />Linkedin</a
+          ><img
+            width="20"
+            class="mr-2"
+            src="~/assets/img/linkin.svg"
+          />Linkedin</a
         >
       </div>
       <div class="p-2 lg:py-0 lg:px-3">
@@ -36,7 +40,11 @@
           target="_blank"
           href="https://confluence.hl7.org/display/COD/CodeX+Home"
           class="flex flex-row underline"
-          ><img width="20" class="mr-2" src="img/confluence.svg" />Confluence</a
+          ><img
+            width="20"
+            class="mr-2"
+            src="~/assets/img/confluence.svg"
+          />Confluence</a
         >
       </div>
     </div>

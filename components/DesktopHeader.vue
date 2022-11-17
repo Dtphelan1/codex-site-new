@@ -7,7 +7,10 @@
           alt="CodeX Logo"
           :src="'img/logo-' + logoColor + '.svg'"
         />
-        <img class="code-logo self-end" src="img/code-logo-white.png" />
+        <img
+          class="code-logo self-end"
+          src="~/assets/img/code-logo-white.png"
+        />
       </a>
       <div class="flex flex-row gap-8 ml-auto text-white items-center">
         <div
