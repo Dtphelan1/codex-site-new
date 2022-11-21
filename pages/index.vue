@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-between">
+  <VueFragment>
     <div id="headerApp">
       <Header
         logo-color="red"
@@ -321,6 +321,7 @@
       </div>
     </div>
     <div class="bg-darkgrey text-white">
+      ¸
       <div
         class="flex flex-col lg:flex-row mx-14 lg:mx-56 my-20 justify-center"
       >
@@ -738,7 +739,7 @@
         </p>
       </div>
     </div>
-  </div>
+  </VueFragment>
 </template>
 <script>
 export default {

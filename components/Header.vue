@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <VueFragment>
     <DesktopHeader
       :logo-color="logoColor"
       :underline-link="underlineLink"
@@ -11,7 +11,7 @@
       :bg-class="mobileClass"
       class="block md:hidden"
     />
-  </div>
+  </VueFragment>
 </template>
 <script>
 export default {

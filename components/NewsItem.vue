@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <VueFragment>
     <div class="bg-backgroundgrey border-t-4 border-lightbrown news-card">
       <h1 tabindex="1" class="satoshi-bold font-black font-16px underline">
         <a target="_blank" :href="item.link">{{ item.title }}</a>
@@ -14,7 +14,7 @@
       </h2>
       <p tabindex="1">{{ item.summary }}</p>
     </div>
-  </div>
+  </VueFragment>
 </template>
 <script>
 export default {

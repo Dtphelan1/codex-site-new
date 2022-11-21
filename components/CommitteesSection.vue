@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <VueFragment>
     <steering :members="committeeMembers['steering']" />
     <operating :members="committeeMembers['operating']" />
-  </div>
+  </VueFragment>
 </template>
 <script>
 const committeeMembers = {

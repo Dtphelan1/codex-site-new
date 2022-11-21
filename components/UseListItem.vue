@@ -1,5 +1,5 @@
 <template v-for="(use, index) in uses">
-  <div>
+  <VueFragment>
     <div :class="{ 'mb-4 lg:mb-0': index == 0 }">
       <span
         v-if="use.newDomain"
@@ -39,7 +39,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </VueFragment>
 </template>
 <script>
 export default {

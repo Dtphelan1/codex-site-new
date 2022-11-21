@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <VueFragment>
     <ul
       v-for="leader in leaders"
       :key="leader['title']"
@@ -22,7 +22,7 @@
         {{ leader['title'] }}
       </h3>
     </ul>
-  </div>
+  </VueFragment>
 </template>
 <script>
 const leaders = [

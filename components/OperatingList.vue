@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <VueFragment>
     <div>
       <h2 tabindex="2" class="satoshi-bold text-darkbrown uppercase font-16px">
         Operating Committee
@@ -16,7 +16,7 @@
         <p tabindex="2" class="pb-1 lg:pb-0">{{ member }}</p>
       </div>
     </div>
-  </div>
+  </VueFragment>
 </template>
 
 <script>
