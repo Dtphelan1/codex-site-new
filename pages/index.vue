@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex flex-col h-screen justify-between min-w-full">
+  <div class="flex flex-col justify-between">
     <div id="headerApp">
       <Header
         logo-color="red"
@@ -737,9 +737,6 @@
           ><img class="inline ml-2" src="~/assets/img/arrow.svg" />
         </p>
       </div>
-    </div>
-    <div id="footerApp">
-      <footers />
     </div>
   </div>
 </template>
