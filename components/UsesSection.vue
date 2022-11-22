@@ -4,7 +4,7 @@
       class="flex flex-col place-content-center use-container lgx:p-0 lg:flex-row"
     >
       <div
-        class="lgx:flex flex-row justify-center items-center mr-0 lg:mr-20 bg-darkred text-white lg:bg-white lg:text-darkred py-10 lg:py-0"
+        class="lgx:flex flex-row justify-center items-baseline mr-0 lg:mr-20 bg-darkred text-white lg:bg-white lg:text-darkred py-10 lg:py-0"
       >
         <div
           tabindex="2"
@@ -12,7 +12,7 @@
         >
           {{ useItems.execution.length }}
         </div>
-        <div tabindex="2" class="use-num-desc self-end">In Execution</div>
+        <div tabindex="2" class="use-num-desc">In Execution</div>
       </div>
       <div tabindex="-1" class="hidden lg:flex flex-col items-stretch">
         <img width="63" src="~/assets/img/diamond1.svg" />
@@ -37,7 +37,7 @@
         >
           {{ useItems.planning.length }}
         </div>
-        <div tabindex="2" class="use-num-desc self-end">In Planning</div>
+        <div tabindex="2" class="use-num-desc">In Planning</div>
       </div>
       <div tabindex="-1" class="hidden lg:flex flex-col items-stretch">
         <img width="43" src="~/assets/img/diamond2.svg" />
@@ -59,7 +59,7 @@
         >
           {{ useItems.discovery.length }}
         </div>
-        <div tabindex="2" class="use-num-desc self-end">In Discovery</div>
+        <div tabindex="2" class="use-num-desc">In Discovery</div>
       </div>
       <div tabindex="-1" class="hidden lg:flex flex-col items-stretch">
         <img width="33" src="~/assets/img/diamond3.svg" />
