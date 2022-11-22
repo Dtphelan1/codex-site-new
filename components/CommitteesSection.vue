@@ -1,7 +1,7 @@
 <template>
   <VueFragment>
-    <steering :members="committeeMembers['steering']" />
-    <operating :members="committeeMembers['operating']" />
+    <SteeringList :members="committeeMembers['steering']" />
+    <OperatingList :members="committeeMembers['operating']" />
   </VueFragment>
 </template>
 <script>
