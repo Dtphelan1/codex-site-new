@@ -1,14 +1,5 @@
 <template>
   <VueFragment>
-    <div id="headerApp">
-      <Header
-        logo-color="red"
-        mobile-text-color="red"
-        mobile-logo-color="red"
-        mobile-class="mobile-header-container"
-        underline-link="index"
-      />
-    </div>
     <div class="flex justify-left items-left place-items-center home-banner">
       <div class="text-white pl-28 text-left banner-container mt-64 mdx:hidden">
         <h1 tabindex="0" class="h1 font-black satoshi-bold leading-none">

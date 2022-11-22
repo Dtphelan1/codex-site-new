@@ -2,25 +2,43 @@
   <div :class="bgClass">
     <div class="flex place-items-center mobile-header">
       <a class="flex" href="index">
-        <img :src="'img/logo-' + logoColor + '.svg'" class="logo" />
-        <img :src="'img/code-logo-' + logoColor + '.png'" class="code-logo" />
+        <img
+          :src="require(`~/assets/img/logo-${logoColor}.svg`)"
+          class="logo"
+        />
+        <img
+          :src="require(`~/assets/img/code-logo-${logoColor}.png`)"
+          class="code-logo"
+        />
       </a>
       <div
+        v-show="!menuOpen"
         id="open-menu-button-div"
-        onclick="openmenu();"
-        class="open-menu-button-div ml-auto"
+        class="open-menu-button-div ml-auto cursor-pointer"
+        @click="toggleMenu"
       >
-        <img class="open-menu-button" :src="`img/menu-${textColor}.svg`" />
+        <img
+          class="open-menu-button"
+          :src="require(`~/assets/img/menu-${textColor}.svg`)"
+        />
       </div>
       <div
+        v-show="menuOpen"
         id="close-menu-button-div"
-        onclick="closemenu();"
-        class="close-menu-button-div ml-auto hidden"
+        class="close-menu-button-div ml-auto cursor-pointer"
+        @click="toggleMenu"
       >
-        <img class="close-menu-button" :src="`img/close-${textColor}.svg`" />
+        <img
+          class="close-menu-button"
+          :src="require(`~/assets/img/close-${textColor}.svg`)"
+        />
       </div>
     </div>
-    <div id="mobile-menu" :class="`mobile-menu hidden text-${textColor}`">
+    <div
+      v-show="menuOpen"
+      id="mobile-menu"
+      :class="`mobile-menu text-${textColor}`"
+    >
       <div class="pb-2">
         <a href="index">Home</a>
       </div>
@@ -56,6 +74,16 @@ export default {
     bgClass: {
       type: String,
       required: true,
+    },
+  },
+  data() {
+    return {
+      menuOpen: false,
+    }
+  },
+  methods: {
+    toggleMenu() {
+      this.menuOpen = !this.menuOpen
     },
   },
 }

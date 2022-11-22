@@ -11,11 +11,19 @@ module.exports = {
   extends: ['@nuxtjs', 'plugin:nuxt/recommended', 'prettier'],
   plugins: [],
   // add your custom rules here
+  overrides: [
+    {
+      files: ['pages/**/*.vue', 'layouts/*.vue'],
+      rules: {
+        'vue/multi-word-component-names': 'off',
+      },
+    },
+  ],
   rules: {
     'vue/multi-word-component-names': [
       'error',
       {
-        ignores: ['Header', 'Footer', 'default'],
+        ignores: ['Header', 'Footer'],
       },
     ],
   },
