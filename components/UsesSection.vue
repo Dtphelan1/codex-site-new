@@ -4,7 +4,7 @@
       class="flex flex-col place-content-center use-container lgx:p-0 lg:flex-row"
     >
       <div
-        class="lgx:flex flex-row justify-center items-center use-num-container lgx:m-0 bg-darkred text-white lg:bg-white lg:text-darkred py-10 lg:py-0"
+        class="lgx:flex flex-row justify-center items-center mr-0 lg:mr-20 bg-darkred text-white lg:bg-white lg:text-darkred py-10 lg:py-0"
       >
         <div
           tabindex="2"
@@ -19,14 +19,17 @@
         <div class="use-line use-line-1 border-darkred"></div>
       </div>
       <div class="use-list use-list-execute pr-14 pt-10 lg:pr-0 lg:pt-0">
-        <use-item-list :uses="useItems.execution" image="img/diamond1.svg" />
+        <UsesList
+          :uses="useItems.execution"
+          image="~/assets/img/diamond1.svg"
+        />
       </div>
     </div>
     <div
       class="flex flex-col place-content-center use-container mt-10 lg:mt-0 lgx:p-0 lg:flex-row"
     >
       <div
-        class="lgx:flex flex-row justify-center items-center use-num-container lgx:m-0 bg-gold text-white lg:bg-white lg:text-gold py-10 lg:py-0"
+        class="lgx:flex flex-row justify-center items-center mr-0 lg:mr-20 bg-gold text-white lg:bg-white lg:text-gold py-10 lg:py-0"
       >
         <div
           tabindex="2"
@@ -41,14 +44,14 @@
         <div class="use-line border-gold"></div>
       </div>
       <div class="use-list use-list-planning pr-14 pt-10 lg:pr-0 lg:pt-0">
-        <use-item-list :uses="useItems.planning" image="img/diamond2.svg" />
+        <UsesList :uses="useItems.planning" image="~/assets/img/diamond2.svg" />
       </div>
     </div>
     <div
       class="flex flex-col place-content-center use-container mt-10 lg:mt-0 lgx:p-0 lg:flex-row"
     >
       <div
-        class="lgx:flex flex-row justify-center items-center use-num-container lgx:m-0 bg-medgrey text-white lg:bg-white lg:text-medgrey py-10 lg:py-0"
+        class="lgx:flex flex-row justify-center items-center mr-0 lg:mr-20 bg-medgrey text-white lg:bg-white lg:text-medgrey py-10 lg:py-0"
       >
         <div
           tabindex="2"
@@ -63,7 +66,10 @@
         <div class="use-line border-medgrey"></div>
       </div>
       <div class="use-list use-list-discovery pr-14 pt-10 lg:pr-0 lg:pt-0">
-        <use-item-list :uses="useItems.discovery" image="img/diamond3.svg" />
+        <UsesList
+          :uses="useItems.discovery"
+          image="~/assets/img/diamond3.svg"
+        />
       </div>
     </div>
   </div>
@@ -156,7 +162,9 @@ const useItems = {
 }
 export default {
   data() {
-    return useItems
+    return {
+      useItems,
+    }
   },
 }
 </script>
