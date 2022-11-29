@@ -32,7 +32,7 @@
       </div>
     </div>
     <div class="w-full md:w-1/2 mt-6 md:mt-0 xl:w-1/3">
-      <form id="contactForm" onsubmit="submitContactForm(this);" class="">
+      <form id="contactForm" ref="form" @submit="submitContactForm">
         <div
           class="flex flex-col w-full sm:flex-row sm:items-center sm:gap-8 md:gap-0 md:flex-col xl:flex-row xl:gap-6 mb-6"
         >
@@ -95,19 +95,23 @@
             <input
               id="contact-submit"
               type="submit"
-              value="Submit"
-              class="bg-darkbrown w-full sm:w-36 h-11 satoshi-bold rounded clickable"
+              :value="submitLoading ? 'Submitting...' : 'Submit'"
+              class="bg-darkbrown w-full sm:w-36 h-11 satoshi-bold rounded cursor-pointer disabled:bg-darkgrey disabled:border disabled:border-white"
+              :class="{ 'cursor-not-allowed': submitLoading }"
+              :disabled="submitLoading"
             />
           </div>
           <div
+            v-show="submitSuccess"
             id="contact-submit-success"
-            class="success text-center rounded mt-2 lg:mt-0 mb-6 p-2 hidden"
+            class="success text-center rounded mt-2 lg:mt-0 mb-6 p-2"
           >
             Thank you for your feedback!
           </div>
           <div
+            v-show="submitError"
             id="contact-submit-error"
-            class="error text-center rounded mt-2 lg:mt-0 mb-6 p-2 hidden"
+            class="error text-center rounded mt-2 lg:mt-0 mb-6 p-2"
           >
             Sorry, there was an error, please try again later.
           </div>
@@ -117,7 +121,45 @@
   </div>
 </template>
 <script>
+import { sendForm } from '@emailjs/browser'
+
 export default {
   layout: 'DefaultGrey',
+  data() {
+    return {
+      submitLoading: false,
+      submitError: false,
+      submitSuccess: false,
+      EMAILJS_SERVICE_ID: 'service_vhw7slg',
+      EMAILJS_TEMPLATE_ID: 'template_q4j4dpi',
+      EMAILJS_PUBLIC_KEY: 'Ogb0ZaVWt1cujLVK1',
+    }
+  },
+  methods: {
+    submitContactForm(e) {
+      e.preventDefault()
+      // Reinitialize relevant state parameters
+      this.submitError = false
+      this.submitSuccess = false
+      this.submitLoading = true
+      sendForm(
+        this.EMAILJS_SERVICE_ID,
+        this.EMAILJS_TEMPLATE_ID,
+        this.$refs.form,
+        this.EMAILJS_PUBLIC_KEY
+      ).then(
+        (result) => {
+          this.submitLoading = false
+          this.submitSuccess = true
+          console.log('SUCCESS!', result.text)
+        },
+        (error) => {
+          this.submitLoading = false
+          this.submitError = true
+          console.log('FAILED...', error.text)
+        }
+      )
+    },
+  },
 }
 </script>

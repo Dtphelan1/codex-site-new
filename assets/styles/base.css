@@ -376,10 +376,6 @@ p {
   height: 700px;
 }
 
-.clickable {
-  cursor: pointer;
-}
-
 .error {
   background-color: #dc3545;
 }
