@@ -1,7 +1,7 @@
 <template>
   <div class="header-container absolute inset-0 z-10">
     <div class="flex">
-      <a class="flex" href="index">
+      <a class="flex" href="/">
         <img
           class="logo"
           alt="CodeX Logo"
@@ -22,10 +22,10 @@
             },
           ]"
         >
-          <a tabindex="1" href="index">Home</a>
+          <a tabindex="1" href="/">Home</a>
         </div>
         <div class="flex items-center">
-          <a tabindex="1" href="index#news">News</a>
+          <a tabindex="1" href="/#news">News</a>
         </div>
         <div
           :class="[

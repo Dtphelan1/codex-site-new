@@ -1,7 +1,7 @@
 <template>
   <div :class="bgClass">
     <div class="flex place-items-center mobile-header">
-      <a class="flex" href="index">
+      <a class="flex" href="/">
         <img
           :src="require(`~/assets/img/logo-${logoColor}.svg`)"
           class="logo"
@@ -40,10 +40,10 @@
       :class="`mobile-menu text-${textColor}`"
     >
       <div class="pb-2">
-        <a href="index">Home</a>
+        <a href="/">Home</a>
       </div>
       <div class="pb-2">
-        <a href="index#news">News</a>
+        <a href="/#news">News</a>
       </div>
       <div class="pb-2">
         <a href="uses">Use Cases</a>

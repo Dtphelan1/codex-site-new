@@ -2,10 +2,10 @@
   <div class="footer grid text-white font-16px pt-8 lg:py-8">
     <div class="flex flex-col lg:flex-row justify-self-end mr-16 lg:mr-0">
       <div class="py-2 lg:py-0 lg:px-3">
-        <a tabindex="3" href="index">Home</a>
+        <a tabindex="3" href="/">Home</a>
       </div>
       <div class="py-2 lg:py-0 lg:px-3">
-        <a tabindex="3" href="index#news">News</a>
+        <a tabindex="3" href="/#news">News</a>
       </div>
       <div class="py-2 lg:py-0 lg:px-3">
         <a tabindex="3" href="uses">Use Cases</a>

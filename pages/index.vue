@@ -14,7 +14,7 @@
           deserve and should expect.
         </div>
         <div class="mt-8 flex">
-          <a class="basis-1/2" tabindex="0" href="index#news">
+          <a class="basis-1/2" tabindex="0" href="/#news">
             <div
               class="font-black satoshi-bold font-24px mt-2 mb-2 mr-2 bg-white border-3 border-white rounded-5px p-4 px-8 text-black text-center"
             >
@@ -47,7 +47,7 @@
           deserve and should expect.
         </div>
         <div class="mt-5 flex">
-          <a class="grow" href="index#news">
+          <a class="grow" href="/#news">
             <div
               class="satoshi-black font-16px font-black bg-black border-3 border-black rounded-5px mr-2.5 p-4 px-8 text-white text-center"
             >
@@ -553,9 +553,7 @@
         </div>
       </div>
     </div>
-    <div id="newsApp">
-      <news />
-    </div>
+    <NewsSection />
     <div
       class="bg-darkgrey flex flex-col md:flex-row px-8 py-12 lg:py-16 justify-center"
     >
