@@ -25,41 +25,13 @@
   </VueFragment>
 </template>
 <script>
-const leaders = [
-  {
-    name: 'Dr. Steven Bratt, PhD',
-    title: 'Program Manager',
-    image: 'steveBratt.svg',
-    'image-alt': 'Headshot of Dr. Steven Bratt',
-    link: 'https://confluence.hl7.org/display/~steve_bratt',
-  },
-  {
-    name: 'Dr. Su Chen, MD',
-    title: 'Clinical Director',
-    image: 'suChen.svg',
-    'image-alt': 'Headshot of Dr. Su Chen',
-    link: 'https://confluence.hl7.org/display/~suchen',
-  },
-  {
-    name: 'Dr. Michele Galioto, DNP, RN, CNS',
-    title: 'Deputy Director',
-    image: 'micheleGalioto.png',
-    'image-alt': 'Headshot of Dr. Michele Galioto',
-    link: 'https://confluence.hl7.org/display/~mgalioto',
-  },
-  {
-    name: 'Dr. Liz (Newlin) Canzone, PhD',
-    title: 'Director of Operations',
-    image: 'liz-crop.png',
-    'image-alt': 'Headshot of Liz Canzone',
-    link: 'https://confluence.hl7.org/display/~ecanzone',
-  },
-]
+// const leaders = []
 export default {
-  data() {
-    return {
-      leaders,
-    }
+  props: {
+    leaders: {
+      type: Array,
+      required: true,
+    },
   },
 }
 </script>
