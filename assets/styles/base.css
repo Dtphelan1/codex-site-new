@@ -341,6 +341,7 @@ p {
 
 .community-header-block {
   height: 370px;
+  flex-shrink: 0;
 }
 
 .community-page-headline {
