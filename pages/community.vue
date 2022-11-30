@@ -259,8 +259,6 @@ export default {
   layout: 'DefaultGrey',
   async asyncData({ $content, params }) {
     const leaders = await $content('leaders').fetch()
-    console.log('async')
-    console.log(leaders)
 
     return {
       leaders,
