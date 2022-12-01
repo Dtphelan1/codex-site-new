@@ -1,83 +1,62 @@
 <template>
-  <div
-    id="newsCarousel"
-    class="carousel carousel-dark slide relative lg:hidden"
-    data-bs-ride="carousel"
-    data-bs-interval="false"
+  <VueSlickCarousel
+    class="lg:!hidden"
+    :arrows="true"
+    :dots="true"
+    :adaptive-height="true"
+    :slides-to-show="1"
+    :slides-to-scroll="1"
   >
-    <div class="carousel-inner relative w-full overflow-hidden">
-      <div
-        v-for="(item, index) in newsItems"
-        :key="index"
-        :class="[
-          'carousel-item relative float-left w-full',
-          { active: index == 0 },
-        ]"
-      >
-        <div
-          class="flex flex-col px-2 justify-center sm:px-16 md:px-32 lg:px-4 xl:px-16 lg:grid lg:grid-cols-3 lg:gap-x-4 xl:gap-x-6"
-        >
-          <div
-            :class="[
-              'mb-8 xl:mb-0',
-              {
-                'xl:pr-2': index == 0,
-                'xl:pl-2': index == newsItems.length - 1,
-              },
-            ]"
-          >
-            <news-item :item="item" />
-          </div>
-        </div>
-      </div>
+    <div v-for="(item, index) in newsItems" :key="index" class="px-8">
+      <NewsItem :item="item" />
     </div>
-    <button
-      class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-      type="button"
-      data-bs-target="#newsCarousel"
-      data-bs-slide="prev"
-    >
-      <span
-        class="carousel-control-prev-icon prev-icon inline-block bg-no-repeat"
-        aria-hidden="true"
-      ></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-      type="button"
-      data-bs-target="#newsCarousel"
-      data-bs-slide="next"
-    >
-      <span
-        class="carousel-control-next-icon next-icon inline-block bg-no-repeat"
-        aria-hidden="true"
-      ></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-    <div
-      class="carousel-indicators indicator-container absolute right-0 left-0 flex justify-center p-0 mb-4"
-    >
-      <button
-        v-for="(item, index) in newsItems"
-        :key="index"
-        type="button"
-        data-bs-target="#newsCarousel"
-        :data-bs-slide-to="index"
-        :class="['round-indicator', { active: index == 0 }]"
-        aria-current="true"
-        :aria-label="'News Story ' + (index + 1)"
-      />
-    </div>
-  </div>
+    <template #prevArrow>
+      <div :style="{ backgroundImage: `url(${prev})` }"></div>
+    </template>
+    <template #nextArrow>
+      <div :style="{ backgroundImage: `url(${next})` }"></div>
+    </template>
+  </VueSlickCarousel>
 </template>
 <script>
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+// optional style for arrows & dots
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+import next from 'assets/img/NextIcon.svg'
+import prev from 'assets/img/PrevIcon.svg'
+
 export default {
+  components: { VueSlickCarousel },
+
   props: {
     newsItems: {
       type: Array,
       required: true,
     },
   },
+  data() {
+    return {
+      next,
+      prev,
+    }
+  },
 }
 </script>
+<style scoped>
+/* Override next and prev styles */
+.slick-arrow {
+  background-position: unset !important;
+  background-size: unset !important;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+.slick-next::before {
+  content: none;
+}
+.slick-prev::before {
+  content: none;
+}
+</style>

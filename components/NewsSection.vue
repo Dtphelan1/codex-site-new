@@ -19,8 +19,8 @@
         ><img class="inline ml-2" src="~/assets/img/arrow.svg" />
       </div>
     </div>
-    <mobile-news :news-items="newsItems" />
-    <desktop-news :news-items="newsItems" />
+    <MobileNews :news-items="newsItems" />
+    <DesktopNews :news-items="newsItems" />
   </div>
 </template>
 <script>

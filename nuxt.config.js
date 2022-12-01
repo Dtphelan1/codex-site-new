@@ -45,7 +45,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/plugins/carousel.js', ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -77,6 +77,6 @@ export default {
 
   // Custom link active class for routes
   router: {
-    linkExactActiveClass: 'underline decoration-solid underline-offset-8',
+    linkExactActiveClass: 'decoration-solid underline underline-offset-8',
   },
 }

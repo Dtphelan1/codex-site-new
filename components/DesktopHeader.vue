@@ -13,22 +13,22 @@
         />
       </NuxtLink>
       <div class="flex flex-row gap-8 ml-auto text-white items-center">
-        <div :class="['flex items-center']">
+        <div>
           <NuxtLink to="/">Home</NuxtLink>
         </div>
-        <div class="flex items-center">
+        <div>
           <NuxtLink to="/#news">News</NuxtLink>
         </div>
-        <div :class="['flex items-center']">
+        <div>
           <NuxtLink to="/uses">Use Cases</NuxtLink>
         </div>
-        <div :class="['flex items-center']">
+        <div>
           <NuxtLink to="/community">Community</NuxtLink>
         </div>
-        <div :class="['flex items-center']">
+        <div>
           <NuxtLink to="/story">Our Story</NuxtLink>
         </div>
-        <div :class="['flex items-center']">
+        <div>
           <NuxtLink to="/contact">Contact</NuxtLink>
         </div>
       </div>

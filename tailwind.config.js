@@ -4,6 +4,7 @@ module.exports = {
     `./layouts/**/*.vue`,
     `./pages/**/*.vue`,
     `./plugins/**/*.{js,ts}`,
+    `./nuxt.config.js`,
   ],
   theme: {
     extend: {
@@ -19,9 +20,6 @@ module.exports = {
         darkred: '#98391E',
         newsgrey: '#625D5D',
         gold: '#D69B41',
-      },
-      textUnderlineOffset: {
-        6: '6px',
       },
       fontFamily: {
         sans: ['Satoshi-Regular', 'sans-serif'],
