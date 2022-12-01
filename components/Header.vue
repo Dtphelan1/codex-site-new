@@ -1,17 +1,13 @@
 <template>
-  <VueFragment>
-    <DesktopHeader
-      :logo-color="logoColor"
-      :underline-link="underlineLink"
-      class="hidden md:block"
-    />
+  <div>
+    <DesktopHeader :logo-color="logoColor" class="hidden md:block" />
     <MobileHeader
       :logo-color="mobileLogoColor"
       :text-color="mobileTextColor"
       :bg-class="mobileClass"
       class="block md:hidden"
     />
-  </VueFragment>
+  </div>
 </template>
 <script>
 export default {
@@ -29,10 +25,6 @@ export default {
       required: true,
     },
     mobileClass: {
-      type: String,
-      required: true,
-    },
-    underlineLink: {
       type: String,
       required: true,
     },

@@ -1,7 +1,7 @@
 <template>
   <div :class="bgClass">
     <div class="flex place-items-center mobile-header">
-      <a class="flex" href="/">
+      <NuxtLink class="flex" to="/">
         <img
           :src="require(`~/assets/img/logo-${logoColor}.svg`)"
           class="logo"
@@ -10,7 +10,7 @@
           :src="require(`~/assets/img/code-logo-${logoColor}.png`)"
           class="code-logo"
         />
-      </a>
+      </NuxtLink>
       <div
         v-show="!menuOpen"
         id="open-menu-button-div"
@@ -40,22 +40,22 @@
       :class="`mobile-menu text-${textColor}`"
     >
       <div class="pb-2">
-        <a href="/">Home</a>
+        <NuxtLink to="/">Home</NuxtLink>
       </div>
       <div class="pb-2">
-        <a href="/#news">News</a>
+        <NuxtLink to="/#news">News</NuxtLink>
       </div>
       <div class="pb-2">
-        <a href="uses">Use Cases</a>
+        <NuxtLink to="/uses">Use Cases</NuxtLink>
       </div>
       <div class="pb-2">
-        <a href="community">Community</a>
+        <NuxtLink to="/community">Community</NuxtLink>
       </div>
       <div class="pb-2">
-        <a href="story">Our Story</a>
+        <NuxtLink to="/story">Our Story</NuxtLink>
       </div>
       <div class="pb-2">
-        <a href="contact">Contact</a>
+        <NuxtLink to="/contact">Contact</NuxtLink>
       </div>
     </div>
   </div>

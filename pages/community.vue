@@ -1,5 +1,5 @@
 <template>
-  <VueFragment>
+  <div>
     <div
       class="community-header-block bg-darkgrey flex justify-center items-center px-4"
     >
@@ -36,12 +36,7 @@
       <h1 tabindex="2" class="satoshi-black font-bold font-36px text-darkbrown">
         Leadership
       </h1>
-      <div
-        id="leaderApp"
-        class="pt-2.5 grid grid-cols-1 lg:grid-cols-4 lg:gap-x-11 justify-between"
-      >
-        <LeadersSection :leaders="leaders" />
-      </div>
+      <LeadersSection :leaders="leaders" />
     </div>
     <div class="px-16 bg-white">
       <h1
@@ -50,9 +45,10 @@
       >
         Managing Committees
       </h1>
-      <div id="commApp" class="flex flex-col justify-between lg:flex-row">
-        <CommitteesSection />
-      </div>
+      <CommitteeMembers
+        :steering-members="steeringMembers"
+        :operating-members="operatingMembers"
+      />
     </div>
     <div class="px-16 pt-20 bg-white">
       <h1 tabindex="2" class="satoshi-black font-bold font-36px text-darkbrown">
@@ -252,16 +248,35 @@
         /></a>
       </p>
     </div>
-  </VueFragment>
+  </div>
 </template>
 <script>
 export default {
   layout: 'DefaultGrey',
+  ssr: false, // Disable Server Side rendering
   async asyncData({ $content, params }) {
     const leaders = await $content('leaders').fetch()
 
+    const steeringMembersObjs = await $content('committeeMembers')
+      .only('name')
+      .sortBy('name')
+      .where({ slug: 'steering' })
+      .fetch()
+    const steeringMembers = steeringMembersObjs.map(
+      (memberObj) => memberObj.name
+    )
+    const operatingMembersObjs = await $content('committeeMembers')
+      .only('name')
+      .sortBy('name')
+      .where({ slug: 'operating' })
+      .fetch()
+    const operatingMembers = operatingMembersObjs.map(
+      (memberObj) => memberObj.name
+    )
     return {
       leaders,
+      steeringMembers,
+      operatingMembers,
     }
   },
 }

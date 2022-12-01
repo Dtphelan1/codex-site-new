@@ -1,5 +1,5 @@
 <template>
-  <VueFragment>
+  <div>
     <div class="flex justify-left items-left place-items-center home-banner">
       <div class="text-white pl-28 text-left banner-container mt-64 mdx:hidden">
         <h1 tabindex="0" class="h1 font-black satoshi-bold leading-none">
@@ -728,7 +728,7 @@
         </p>
       </div>
     </div>
-  </VueFragment>
+  </div>
 </template>
 <script>
 export default {

@@ -1,5 +1,8 @@
 <template>
-  <VueFragment>
+  <div
+    id="leaderApp"
+    class="pt-2.5 grid grid-cols-1 lg:grid-cols-4 lg:gap-x-11 justify-between"
+  >
     <ul
       v-for="leader in leaders"
       :key="leader['title']"
@@ -22,7 +25,7 @@
         {{ leader['title'] }}
       </h3>
     </ul>
-  </VueFragment>
+  </div>
 </template>
 <script>
 // const leaders = []

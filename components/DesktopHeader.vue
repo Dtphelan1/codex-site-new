@@ -1,7 +1,7 @@
 <template>
   <div class="header-container absolute inset-0 z-10">
     <div class="flex">
-      <a class="flex" href="/">
+      <NuxtLink class="flex" to="/">
         <img
           class="logo"
           alt="CodeX Logo"
@@ -11,65 +11,25 @@
           class="code-logo self-end"
           src="~/assets/img/code-logo-white.png"
         />
-      </a>
+      </NuxtLink>
       <div class="flex flex-row gap-8 ml-auto text-white items-center">
-        <div
-          :class="[
-            'flex items-center',
-            {
-              'underline decoration-solid underline-offset-8':
-                underlineLink == 'index',
-            },
-          ]"
-        >
-          <a tabindex="1" href="/">Home</a>
+        <div :class="['flex items-center']">
+          <NuxtLink to="/">Home</NuxtLink>
         </div>
         <div class="flex items-center">
-          <a tabindex="1" href="/#news">News</a>
+          <NuxtLink to="/#news">News</NuxtLink>
         </div>
-        <div
-          :class="[
-            'flex items-center',
-            {
-              'underline decoration-solid underline-offset-8':
-                underlineLink == 'uses',
-            },
-          ]"
-        >
-          <a tabindex="1" href="uses">Use Cases</a>
+        <div :class="['flex items-center']">
+          <NuxtLink to="/uses">Use Cases</NuxtLink>
         </div>
-        <div
-          :class="[
-            'flex items-center',
-            {
-              'underline decoration-solid underline-offset-8':
-                underlineLink == 'community',
-            },
-          ]"
-        >
-          <a tabindex="1" href="community">Community</a>
+        <div :class="['flex items-center']">
+          <NuxtLink to="/community">Community</NuxtLink>
         </div>
-        <div
-          :class="[
-            'flex items-center',
-            {
-              'underline decoration-solid underline-offset-8':
-                underlineLink == 'story',
-            },
-          ]"
-        >
-          <a tabindex="1" href="story">Our Story</a>
+        <div :class="['flex items-center']">
+          <NuxtLink to="/story">Our Story</NuxtLink>
         </div>
-        <div
-          :class="[
-            'flex items-center',
-            {
-              'underline decoration-solid underline-offset-8':
-                underlineLink == 'contact',
-            },
-          ]"
-        >
-          <a tabindex="1" href="contact">Contact</a>
+        <div :class="['flex items-center']">
+          <NuxtLink to="/contact">Contact</NuxtLink>
         </div>
       </div>
     </div>
@@ -79,7 +39,6 @@
 export default {
   props: {
     logoColor: { type: String, required: true },
-    underlineLink: { type: String, required: true },
   },
 }
 </script>

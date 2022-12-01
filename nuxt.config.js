@@ -45,7 +45,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/global-fragment.js'],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -74,4 +74,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // Custom link active class for routes
+  router: {
+    linkExactActiveClass: 'underline decoration-solid underline-offset-8',
+  },
 }

@@ -1,5 +1,5 @@
 <template>
-  <VueFragment>
+  <div>
     <div v-for="(use, index) in uses" :key="use.description">
       <div :class="{ 'mb-4 lg:mb-0': index == 0 }">
         <span
@@ -41,7 +41,7 @@
         </div>
       </div>
     </div>
-  </VueFragment>
+  </div>
 </template>
 <script>
 export default {
