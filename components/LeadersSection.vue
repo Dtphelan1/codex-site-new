@@ -28,7 +28,6 @@
   </div>
 </template>
 <script>
-// const leaders = []
 export default {
   props: {
     leaders: {

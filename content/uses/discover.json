@@ -1,0 +1,26 @@
+[
+  {
+    "title": "CardX Hypertension Management",
+    "description": "Design and build an integrated standard that enables interoperable, scalable, and accessible hypertension management, both at home and in the clinic, so that blood pressure data can easily be shared among home blood pressure measurement devices, patient data managers, and health systems. ",
+    "url": "https://confluence.hl7.org/display/COD/CardX+-+Hypertension+Management",
+    "newDomain": true
+  },
+  {
+    "title": "Genomics Data Exchange",
+    "description": "Design and build an integrated standard that enables interoperable, scalable, and accessible genomics data that can easily be shared among laboratories, EHR Systems, and/or genomics repositories. ",
+    "url": "https://confluence.hl7.org/display/COD/GenomeX+-+Genomics+Data+Exchange",
+    "newDomain": true
+  },
+  {
+    "title": "Genomics Operations",
+    "description": "Enable access to complex genomic data through APIs so that developers can more easily develop and populate data for a range of genomic applications. ",
+    "url": "https://confluence.hl7.org/display/COD/GenomeX+-+Genomics+Operations",
+    "newDomain": true
+  },
+  {
+    "title": "Quality Measures",
+    "description": "Create a solution that demonstrates the ability to author and evaluate digital quality measures using the FHIR data model and mCODE, where applicable, for value-based programs and clinical quality improvement in the oncology domain.",
+    "url": "https://confluence.hl7.org/display/COD/Quality+Measures",
+    "newDomain": false
+  }
+]

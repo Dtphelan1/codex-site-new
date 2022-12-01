@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Cancer Registry Reporting",
+    "description": "Enable reporting of mCODE-based cancer data from cancer center health center EHRs to state and private registries that are aggregating data for different reasons, substantially reducing duplication and burden while increasing reporting speed and accuracy.",
+    "url": "https://confluence.hl7.org/display/COD/Cancer+Registry+Reporting",
+    "newDomain": false
+  },
+  {
+    "title": "EHR Endpoints for Clinical Trials (ICAREdata)",
+    "description": "Collect research-quality mCODE-based data from EHRs to increase the value of real-world data for clinical trials, and reduce and potentially eliminate manual and/or duplicate data entry into case report forms.",
+    "url": "https://confluence.hl7.org/display/COD/EHR+Endpoints+for+Cancer+Clinical+Trials",
+    "newDomain": false
+  },
+  {
+    "title": "Integrated Trial Matching for Cancer Patients and Providers",
+    "description": "Leverage mCODE-based data standards and open APIs that enable interoperable, scalable, and accessible clinical trial matching services to improve the ability of patients to find clinical trials for which they may be eligible.",
+    "url": "https://confluence.hl7.org/pages/viewpage.action?pageId=66938394",
+    "newDomain": false
+  },
+  {
+    "title": "mCODE++ Extraction",
+    "description": "Develop software to enable existing EHRs and other systems to share cancer patient data conformant to the mCODE FHIR Implementation Guides to support a variety of use cases. ",
+    "url": "https://confluence.hl7.org/pages/viewpage.action?pageId=76164453",
+    "newDomain": false
+  },
+  {
+    "title": "Radiation Treatment Therapy Data for Cancer",
+    "description": "Leverage mCODE and extensions to enable sharing of critical radiation therapy treatment data for care coordination or data reuse (research, quality measurement, payer-required reporting).",
+    "url": "https://confluence.hl7.org/display/COD/Radiation+Therapy+Treatment+Data+for+Cancer",
+    "newDomain": false
+  }
+]

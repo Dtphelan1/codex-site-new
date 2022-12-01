@@ -33,11 +33,41 @@
         src="~/assets/img/use-steps.svg"
       />
     </div>
-    <UsesSection />
+    <UsesSection
+      :execution="execution"
+      :planning="planning"
+      :discovery="discovery"
+    />
   </div>
 </template>
 <script>
 export default {
   layout: 'DefaultWhiteGradient',
+  async asyncData({ $content }) {
+    const executionUsecaseObjs = await $content('uses')
+      .only('name')
+      .sortBy('name')
+      .where({ slug: 'execution' })
+      .fetch()
+    const execution = executionUsecaseObjs.map((use) => use.name)
+    const planningUsecaseObjs = await $content('uses')
+      .only('name')
+      .sortBy('name')
+      .where({ slug: 'planning' })
+      .fetch()
+    const planning = planningUsecaseObjs.map((use) => use.name)
+    const discoveryUsecaseObjs = await $content('uses')
+      .only('name')
+      .sortBy('name')
+      .where({ slug: 'discovery' })
+      .fetch()
+    const discovery = discoveryUsecaseObjs.map((use) => use.name)
+
+    return {
+      execution,
+      planning,
+      discovery,
+    }
+  },
 }
 </script>
