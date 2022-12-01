@@ -44,24 +44,16 @@
 export default {
   layout: 'DefaultWhiteGradient',
   async asyncData({ $content }) {
-    const executionUsecaseObjs = await $content('uses')
-      .only('name')
-      .sortBy('name')
+    const execution = await $content('uses')
       .where({ slug: 'execution' })
       .fetch()
-    const execution = executionUsecaseObjs.map((use) => use.name)
-    const planningUsecaseObjs = await $content('uses')
-      .only('name')
-      .sortBy('name')
-      .where({ slug: 'planning' })
-      .fetch()
-    const planning = planningUsecaseObjs.map((use) => use.name)
-    const discoveryUsecaseObjs = await $content('uses')
-      .only('name')
-      .sortBy('name')
+    console.log(execution)
+    const planning = await $content('uses').where({ slug: 'planning' }).fetch()
+    console.log(planning)
+    const discovery = await $content('uses')
       .where({ slug: 'discovery' })
       .fetch()
-    const discovery = discoveryUsecaseObjs.map((use) => use.name)
+    console.log(discovery)
 
     return {
       execution,

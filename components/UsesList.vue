@@ -19,7 +19,11 @@
           },
         ]"
       >
-        <img width="22" class="mx-6 mt-1 lg:hidden" :src="image" />
+        <img
+          width="22"
+          class="mx-6 mt-1 lg:hidden"
+          :src="require(`~/assets/img/${image}`)"
+        />
         <div>
           <div>
             <h3

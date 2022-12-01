@@ -24,39 +24,12 @@
   </div>
 </template>
 <script>
-const newsItems = [
-  {
-    title: 'ACS-CAN and CodeX Provided Nearly $1 Million in Support from Amgen',
-    summary:
-      'Pilot Test Trial Eligibility Screening Interventions Aiming to Increase and Diversify Patient Enrollment in Cancer Clinical Trials.',
-    source: 'ACS CAN',
-    date: 'March 3, 2022',
-    link: 'https://www.fightcancer.org/releases/acs-can-provided-nearly-1-million-support-amgen-expand-cancer-clinical-trial-enrollment',
-  },
-  {
-    title:
-      'CodeX Adds Genomics and Cardiovascular Health to Data-Sharing Domains',
-    summary:
-      'From enhanced data-sharing for cancer registry reporting, to improved patient access to clinical trials, to helping patients better manage hypertension from the comfort of their own homes, CodeX community members continue to push the data-sharing envelope. ',
-    source: 'CodeX Confluence',
-    date: 'July 14, 2022',
-    link: 'https://www.hcinnovationgroup.com/interoperability-hie/fast-healthcare-interoperability-resources-fhir/news/21276523/hl7-fhir-accelerator-codex-adds-genomics-cardiovascular-efforts',
-  },
-  {
-    title:
-      'Statements on President Biden’s Historic Appointment of Dr. Monica Bertagnolli as Director of the National Cancer Institute',
-    summary:
-      'President Biden formally announced the appointment of Dr. Monica Bertagnolli as the 16th director of the National Cancer Institute. The White House Office of Science and Technology Policy provided the following statements in support of the appointment: “Congratulations to Dr. Monica Bertagnolli for her historic appointment as the 16th director – and first woman director – of the National Cancer Institute. Dr. Bertagnolli is a leader with impeccable credentials who has made outstanding contributions to the field of clinical oncology. Dr. Bertagnolli arrives at NCI at a critical time in our Nation’s efforts to reduce cancer deaths as well as fundamental inequities in the oncology system.”',
-    source: 'The White House',
-    date: 'August 10, 2022',
-    link: 'https://www.whitehouse.gov/ostp/news-updates/2022/08/10/statements-on-president-bidens-historic-appointment-of-dr-monica-bertagnolli-as-director-of-the-national-cancer-institute/',
-  },
-]
 export default {
-  data() {
-    return {
-      newsItems,
-    }
+  props: {
+    newsItems: {
+      type: Array,
+      required: true,
+    },
   },
 }
 </script>

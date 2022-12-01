@@ -19,7 +19,7 @@
         <div class="use-line use-line-1 border-darkred"></div>
       </div>
       <div class="use-list use-list-execute pr-14 pt-10 lg:pr-0 lg:pt-0">
-        <UsesList :uses="execution" image="~/assets/img/diamond1.svg" />
+        <UsesList :uses="execution" image="diamond1.svg" />
       </div>
     </div>
     <div
@@ -41,7 +41,7 @@
         <div class="use-line border-gold"></div>
       </div>
       <div class="use-list use-list-planning pr-14 pt-10 lg:pr-0 lg:pt-0">
-        <UsesList :uses="planning" image="~/assets/img/diamond2.svg" />
+        <UsesList :uses="planning" image="diamond2.svg" />
       </div>
     </div>
     <div
@@ -63,7 +63,7 @@
         <div class="use-line border-medgrey"></div>
       </div>
       <div class="use-list use-list-discovery pr-14 pt-10 lg:pr-0 lg:pt-0">
-        <UsesList :uses="discovery" image="~/assets/img/diamond3.svg" />
+        <UsesList :uses="discovery" image="diamond3.svg" />
       </div>
     </div>
   </div>
