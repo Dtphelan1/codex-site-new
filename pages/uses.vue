@@ -47,13 +47,10 @@ export default {
     const execution = await $content('uses')
       .where({ slug: 'execution' })
       .fetch()
-    console.log(execution)
     const planning = await $content('uses').where({ slug: 'planning' }).fetch()
-    console.log(planning)
     const discovery = await $content('uses')
       .where({ slug: 'discovery' })
       .fetch()
-    console.log(discovery)
 
     return {
       execution,
