@@ -26,7 +26,6 @@
         v-show="menuOpen"
         id="close-menu-button-div"
         class="close-menu-button-div ml-auto cursor-pointer"
-        @click="toggleMenu"
       >
         <img
           class="close-menu-button"
@@ -80,6 +79,13 @@ export default {
     return {
       menuOpen: false,
     }
+  },
+  watch: {
+    $route() {
+      if (this.menuOpen) {
+        this.toggleMenu()
+      }
+    },
   },
   methods: {
     toggleMenu() {

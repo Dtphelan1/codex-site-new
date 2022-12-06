@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-auto md:h-full px-8 pt-8 md:pt-28 lg:pt-48 pb-6 bg-darkgrey text-white flex flex-col !justify-center md:flex-nowrap md:flex-row md:gap-8 lg:gap-16 xl:gap-32"
+    class="h-auto md:h-full px-8 pt-8 md:pt-28 lg:pt-64 pb-6 bg-darkgrey text-white flex flex-col !justify-center md:flex-nowrap md:flex-row md:gap-8 lg:gap-16 xl:gap-32"
   >
     <div
       class="flex flex-col justify-center items-center md:justify-start md:items-start md:w-1/2 xl:w-1/4"
