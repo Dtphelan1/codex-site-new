@@ -151,11 +151,13 @@ export default {
         (result) => {
           this.submitLoading = false
           this.submitSuccess = true
+          // eslint-disable-next-line no-console
           console.log('SUCCESS!', result.text)
         },
         (error) => {
           this.submitLoading = false
           this.submitError = true
+          // eslint-disable-next-line no-console
           console.log('FAILED...', error.text)
         }
       )
